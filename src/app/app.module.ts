@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './header/nav/nav.component';
 import { SitesectionComponent } from './main/sitesection/sitesection.component';
 import { WorkgridComponent } from './main/workgrid/workgrid.component';
+import { ClientListComponent } from './main/client-list/client-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WorkgridComponent } from './main/workgrid/workgrid.component';
     FooterComponent,
     NavComponent,
     SitesectionComponent,
-    WorkgridComponent
+    WorkgridComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,
