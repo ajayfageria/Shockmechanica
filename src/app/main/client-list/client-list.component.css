@@ -38,19 +38,19 @@ img:hover {
     }
 }
 
-.geeks {
+.client {
     overflow: hidden;
     margin: 0 auto;
 }
 
-.geeks img {
+.client img {
     width: 10rem;
     -webkit-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
     transition: all 0.4s ease-in;
 }
 
-.geeks:hover img {
+.client img:hover {
     transform: scale(1.3);
     cursor: pointer;
 }
