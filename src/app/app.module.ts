@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './header/nav/nav.component';
+import { SitesectionComponent } from './main/sitesection/sitesection.component';
+import { WorkgridComponent } from './main/workgrid/workgrid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent,
+    SitesectionComponent,
+    WorkgridComponent
   ],
   imports: [
     BrowserModule,
