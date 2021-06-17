@@ -10,6 +10,9 @@ import { NavComponent } from './header/nav/nav.component';
 import { SitesectionComponent } from './main/sitesection/sitesection.component';
 import { WorkgridComponent } from './main/workgrid/workgrid.component';
 import { ClientListComponent } from './main/client-list/client-list.component';
+import { ServicesRangeComponent } from './main/services-range/services-range.component';
+import { CaptainintroComponent } from './main/captainintro/captainintro.component';
+import { TeampersonComponent } from './main/teamperson/teamperson.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ClientListComponent } from './main/client-list/client-list.component';
     NavComponent,
     SitesectionComponent,
     WorkgridComponent,
-    ClientListComponent
+    ClientListComponent,
+    ServicesRangeComponent,
+    CaptainintroComponent,
+    TeampersonComponent,
   ],
   imports: [
     BrowserModule,
