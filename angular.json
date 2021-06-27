@@ -31,7 +31,9 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "src/styles.css",
+                            "../../tsm/Shockmechanica/node_modules/font-awesome/css/font-awesome.css"
+                         
                         ],
                         "scripts": []
                     },

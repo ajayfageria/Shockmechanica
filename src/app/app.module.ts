@@ -13,6 +13,7 @@ import { ClientListComponent } from './main/client-list/client-list.component';
 import { ServicesRangeComponent } from './main/services-range/services-range.component';
 import { CaptainintroComponent } from './main/captainintro/captainintro.component';
 import { TeampersonComponent } from './main/teamperson/teamperson.component';
+import { ContactComponent } from './main/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TeampersonComponent } from './main/teamperson/teamperson.component';
     ServicesRangeComponent,
     CaptainintroComponent,
     TeampersonComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

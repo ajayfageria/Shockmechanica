@@ -1,0 +1,113 @@
+.row{
+    background: linear-gradient(to bottom, #2d94f3 0%, #ffffff 106%);
+}
+.contact-title{
+    font-size: 1.75rem;
+    margin-bottom: .9rem;
+    font-weight: 550;
+    line-height: 1.6;
+    font-family: sb-sans,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-weight: 500;
+  
+    letter-spacing: .03rem;
+    color: #2d94f3!important
+   
+}
+.col-md-6{
+  
+    padding: 3rem;
+}
+p{
+    font-family: sb-sans,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    color: #0d264c;
+
+}
+.btn{
+
+    padding: .5rem 1.1rem .4rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    border-width: 2px;
+    margin-top: 3rem;
+    color: #fff;
+    -webkit-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    -o-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    transition: all .3s cubic-bezier(.165,.84,.44,1);
+}
+.btn-primary{
+    color: #fff;
+    background-color: #328ef2;
+    border-color: #328ef2;
+}
+@media only screen and (max-width: 600px) {
+    .contact-title{
+        width: 20rem;
+    }
+}
+
+
+
+.form-bg {
+    background: rgb(241, 218, 218);
+    padding: 3px
+}
+
+.form {
+    background-color: white !important;
+    padding: 20px;
+    max-width: 50rem;
+    border-radius: 1rem;
+}
+
+.form-group {
+    margin-bottom: 10px
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.form-control {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #328ef2;
+    background: transparent;
+    max-height: 5.7rem;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s
+}
+
+button.btn {
+    padding: .5rem 1.1rem .4rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    border-width: 2px;
+    margin-top: 3rem;
+    -webkit-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    -o-transition: all .3s cubic-bezier(.165,.84,.44,1);
+    transition: all .3s cubic-bezier(.165,.84,.44,1);
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #328ef2;
+    border-color: #328ef2;
+}
+
+.col-md-7{
+    padding: 0px;
+}

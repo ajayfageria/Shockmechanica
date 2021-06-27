@@ -8,5 +8,9 @@
 @media only screen and (max-width: 600px) {
     .client {
         clip-path: polygon(100% 0, 100% 95%, 0 100%, 0 6%);
+        padding: 4.5rem;
     }
+}
+.contact{
+    margin-top: 10rem;
 }
