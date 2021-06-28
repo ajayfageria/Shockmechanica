@@ -14,6 +14,7 @@ import { ServicesRangeComponent } from './main/services-range/services-range.com
 import { CaptainintroComponent } from './main/captainintro/captainintro.component';
 import { TeampersonComponent } from './main/teamperson/teamperson.component';
 import { ContactComponent } from './main/contact/contact.component';
+import { GmpComponent } from './main/gmp/gmp.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ContactComponent } from './main/contact/contact.component';
     CaptainintroComponent,
     TeampersonComponent,
     ContactComponent,
+    GmpComponent,
   ],
   imports: [
     BrowserModule,
