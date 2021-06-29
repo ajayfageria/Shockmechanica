@@ -1,5 +1,5 @@
 .row{
-    background: linear-gradient(to bottom, #2d94f3 0%, #ffffff 106%);
+    background: linear-gradient(to left, #c8dcee 0%, #ffffff 106%);
 }
 .contact-title{
     font-size: 1.75rem;
@@ -44,6 +44,10 @@ p{
 @media only screen and (max-width: 600px) {
     .contact-title{
         width: 20rem;
+    }
+    .col-md-6{
+  
+        padding: 0rem;
     }
 }
 
