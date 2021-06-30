@@ -7,6 +7,7 @@
     color: rgba(15, 129, 236, 0.2);
     position: relative;
     margin-top: 4rem;
+   text-shadow:3px 3px rgb(109, 107, 107);
    
 }
 
@@ -26,16 +27,23 @@
 .col{
     margin-left: 0px;
 }
+.main-heading{
+ margin-left: -8px;
+ margin-top: 8rem;
+}
 @media only screen and (max-width: 600px) {
  
     .header-description {
         margin-left: 3rem;
-      
        
     }
+    .main-heading{
+       
+        margin-top: 0px;
+       }
     .header-text-tag {
         margin-top: 7rem;
-        margin-left: 9px;
+       
     }
     div.col-4{
         width: 0px;

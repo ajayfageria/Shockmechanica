@@ -15,6 +15,7 @@ import { CaptainintroComponent } from './main/captainintro/captainintro.componen
 import { TeampersonComponent } from './main/teamperson/teamperson.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { GmpComponent } from './main/gmp/gmp.component';
+import { BookorderComponent } from './main/bookorder/bookorder.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { GmpComponent } from './main/gmp/gmp.component';
     TeampersonComponent,
     ContactComponent,
     GmpComponent,
+    BookorderComponent,
   ],
   imports: [
     BrowserModule,
