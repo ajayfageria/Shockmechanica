@@ -1,3 +1,4 @@
+import { LayoutComponent } from './layout/layout.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,7 +16,6 @@ import { CaptainintroComponent } from './main/captainintro/captainintro.componen
 import { TeampersonComponent } from './main/teamperson/teamperson.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { GmpComponent } from './main/gmp/gmp.component';
-import { BookorderComponent } from './main/bookorder/bookorder.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { BookorderComponent } from './main/bookorder/bookorder.component';
     TeampersonComponent,
     ContactComponent,
     GmpComponent,
-    BookorderComponent,
+    LayoutComponent
+  
   ],
   imports: [
     BrowserModule,
