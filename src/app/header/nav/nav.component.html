@@ -8,14 +8,14 @@
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-items"><a class="nav-link" href="">Home</a></li>
-                    <li class="nav-items"><a class="nav-link" href="">Products</a></li>
+                    <li class="nav-items"><a class="nav-link" routerLink="">Home</a></li>
+                    <li class="nav-items"><a class="nav-link">Products</a></li>
                  
-                    <li class="nav-items"><a class="nav-link" href="">Services</a></li>
-                    <li class="nav-items"><a class="nav-link" href="">Blogs</a></li>
-                    <li class="nav-items"><a class="nav-link" href="">About us</a></li>
+                    <li class="nav-items"><a class="nav-link" routerLink="service-order">Services</a></li>
+                    <li class="nav-items"><a class="nav-link">Blogs</a></li>
+                    <li class="nav-items"><a class="nav-link" >About us</a></li>
                     <li class="nav-items">  <div class="btnStyle" >
-                        <button class = "btn btn-center">Login</button>
+                        <button class = "btn btn-center" (click)= "redirectToLogin()">Login</button>
                     </div>
                 </li>
                 </ul>

@@ -7,15 +7,11 @@
     padding: 0.3rem 0.2rem;  
     margin-left: 2rem;
     text-align: center;
-   
-    
-  
 }
+
 .nav-link:hover{
     background-color: rgba(15, 129, 236, 0.2);
     border-radius: 4px;
-  
-  
     
 }
 
@@ -33,8 +29,7 @@
     margin-left: 3rem;
 }
 .container-fluid {
-    position: fixed;
-    z-index: 1000;
+   
     width: 100%;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
     padding: 0px;

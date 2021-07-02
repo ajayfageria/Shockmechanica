@@ -1,4 +1,4 @@
-import { LayoutComponent } from './layout/layout.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +16,9 @@ import { CaptainintroComponent } from './main/captainintro/captainintro.componen
 import { TeampersonComponent } from './main/teamperson/teamperson.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { GmpComponent } from './main/gmp/gmp.component';
+import { BodyComponent } from './body/body.component';
+import { ServiceorderComponent } from './serviceorder/serviceorder.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { GmpComponent } from './main/gmp/gmp.component';
     TeampersonComponent,
     ContactComponent,
     GmpComponent,
-    LayoutComponent
+    BodyComponent,
+    ServiceorderComponent,
+    LoginComponent
   
   ],
   imports: [

@@ -1,3 +1,4 @@
+import { Router, Routes } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
+  }
+  redirectToLogin(){
+  this.route.navigateByUrl('/login');
   }
 
 }
