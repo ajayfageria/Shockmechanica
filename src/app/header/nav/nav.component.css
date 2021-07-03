@@ -1,6 +1,10 @@
 .navbar-nav {
     margin-right: 10rem;
 }
+/* .navbar{
+    position: fixed;
+    z-index:1000;
+} */
 
 .nav-link {
     display: block;
@@ -28,12 +32,15 @@
 .navbar-brand{
     margin-left: 3rem;
 }
-.container-fluid {
+.navbar{
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+}
+/* .container-fluid {
    
     width: 100%;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
     padding: 0px;
-}
+} */
 .btnStyle .btn {
    
     padding: 0px;
