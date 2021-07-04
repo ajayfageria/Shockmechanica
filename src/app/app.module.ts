@@ -25,6 +25,7 @@ import { BlogComponent } from './blog/blog.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { OrdersListComponent } from './admin-dashboard/orders-list/orders-list.component';
 import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,9 @@ import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

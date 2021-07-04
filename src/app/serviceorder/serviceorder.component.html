@@ -1,1 +1,66 @@
-<p>service-order works!</p>
+<div class="container">
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">email is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="team_name">team_name</label>
+            <input type="text" formControlName="team_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.team_name.errors }" />
+            <div *ngIf="submitted && f.team_name.errors" class="invalid-feedback">
+                <div *ngIf="f.team_name.errors.required">team_name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mobile_number">mobile_number</label>
+            <input type="mobile_number" formControlName="mobile_number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile_number.errors }" />
+            <div *ngIf="submitted && f.mobile_number.errors" class="invalid-feedback">
+                <div *ngIf="f.mobile_number.errors.required">mobile_number is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="shocker_brand">shocker_brand</label>
+            <input type="text" formControlName="shocker_brand" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.shocker_brand.errors }" />
+            <div *ngIf="submitted && f.shocker_brand.errors" class="invalid-feedback">
+                <div *ngIf="f.shocker_brand.errors.required">shocker_brand is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="number_of_pairs">number_of_pairs</label>
+            <input type="number_of_pairs" formControlName="number_of_pairs" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.number_of_pairs.errors }" />
+            <div *ngIf="submitted && f.number_of_pairs.errors" class="invalid-feedback">
+                <div *ngIf="f.number_of_pairs.errors.required">number_of_pairs is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="type_of_service">type_of_service</label>
+            <input type="text" formControlName="type_of_service" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.type_of_service.errors }" />
+            <div *ngIf="submitted && f.type_of_service.errors" class="invalid-feedback">
+                <div *ngIf="f.type_of_service.errors.required">type_of_service is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="problems_facing">problems_facing</label>
+            <input type="problems_facing" formControlName="problems_facing" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.problems_facing.errors }" />
+            <div *ngIf="submitted && f.problems_facing.errors" class="invalid-feedback">
+                <div *ngIf="f.problems_facing.errors.required">problems_facing is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                order
+            </button>
+        </div>
+    </form>
+    </div> 

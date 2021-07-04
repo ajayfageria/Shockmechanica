@@ -1,0 +1,20 @@
+.container{
+    width: 50%;
+} 
+.form-group .btn {
+   
+    padding: 0px;
+    width: 4rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    background-color: rgba(15, 129, 236, 0.2);;
+    color: black;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgba(15, 129, 236, 0.2);
+    padding: 0.3rem 0.2rem;  
+    margin-left: 2rem;
+    -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+    -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+    transition: all .3s cubic-bezier(.165, .84, .44, 1);
+}
