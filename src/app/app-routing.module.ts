@@ -1,3 +1,6 @@
+import { OrdersListComponent } from './admin-dashboard/orders-list/orders-list.component';
+import { BlogComponent } from './blog/blog.component';
+import { ProductListComponent } from './product-list/product-list.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { BodyComponent } from './body/body.component';
@@ -6,11 +9,24 @@ import { MainComponent } from './main/main.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
+  {path: 'product-list', component: ProductListComponent},
+  {path: 'blog', component: BlogComponent},
+  {path: 'about-us', component: AboutUsComponent},
   {path: 'service-order', component: ServiceorderComponent},
-  {path: 'login', component: AdminDashboardComponent},
+  {path: 'admin-dashboard', component: AdminDashboardComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'admin-dashboard', component: AdminDashboardComponent,
+   children: [
+    {path: 'orders', component: OrdersListComponent},
+    {path: 'orders', component: OrdersListComponent},
+    {path: 'create', component: NewadminComponent},
+   ]
+}
 ];
 
 @NgModule({

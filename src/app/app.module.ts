@@ -20,6 +20,11 @@ import { BodyComponent } from './body/body.component';
 import { ServiceorderComponent } from './serviceorder/serviceorder.component';
 import { LoginComponent } from './login/login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { BlogComponent } from './blog/blog.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { OrdersListComponent } from './admin-dashboard/orders-list/orders-list.component';
+import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     BodyComponent,
     ServiceorderComponent,
     LoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    ProductListComponent,
+    BlogComponent,
+    AboutUsComponent,
+    OrdersListComponent,
+    NewadminComponent
   
   ],
   imports: [

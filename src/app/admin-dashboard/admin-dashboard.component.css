@@ -14,60 +14,23 @@
     font-family: 'Roboto', sans-serif;
     font-size: larger;
 }
-th{
-    color: #0D264C;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
-    text-align: center;
-}
-td{
-    text-align: center;
-}
-.nav-link:hover{
-    cursor: pointer;
-}
-.form-inline .btn {
-   
-    padding: 0px;
-    width: 4rem;
-    height: 2.5rem;
-    font-size: 1rem;
-    background-color: white;
-    color: #0D264C;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: rgba(15, 129, 236, 0.2);
-    margin-left: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
-    -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
-    transition: all .3s cubic-bezier(.165, .84, .44, 1);
-}
-.form-inline .btn:hover {
-    background-color: rgba(15, 129, 236, 0.2);
-    color: black;
-  
-}
 .admin-basic{
-   text-align: center;
-   text-transform:lowercase;
- 
+    text-align: center;
+    text-transform:lowercase;
   
-}
-.admin-basic .name{
-    font-weight: bold;
-    margin: 0px;
-    text-transform:uppercase;
-}
-
-@media only screen and (max-width: 600px) {
+   
+ }
+ .admin-basic .name{
+     font-weight: bold;
+     margin: 0px;
+     text-transform:uppercase;
+ }  
+ .active{
+     background-color: white;
+ }
+ @media only screen and (max-width: 600px) {
 
     .nav-link{
         margin-left: 6.2rem;
     }
-    .form-inline .btn {
-        margin-left: 8rem;
-    }
 }
-

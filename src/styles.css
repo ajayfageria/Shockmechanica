@@ -32,3 +32,8 @@ display: none;
       transform: translateY(0px);
     }
   }
+  .active{
+    background-color: rgba(15, 129, 236, 0.2);
+    border-radius: 5px;
+    border-width: 2px;
+  }
