@@ -32,7 +32,7 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "../../tsm/Shockmechanica/node_modules/font-awesome/css/font-awesome.css"
+                            "../Shockmechanica/node_modules/font-awesome/css/font-awesome.css"
                          
                         ],
                         "scripts": []
