@@ -19,6 +19,7 @@ import { GmpComponent } from './main/gmp/gmp.component';
 import { BodyComponent } from './body/body.component';
 import { ServiceorderComponent } from './serviceorder/serviceorder.component';
 import { LoginComponent } from './login/login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LoginComponent } from './login/login.component';
     GmpComponent,
     BodyComponent,
     ServiceorderComponent,
-    LoginComponent
+    LoginComponent,
+    AdminDashboardComponent
   
   ],
   imports: [
