@@ -35,8 +35,8 @@
 
 button.from__button--floating,
 .from__button--floating {
-    height: 55px;
-    line-height: 52px;
+    height: 48px;
+    line-height: 50px;
 }
 
 .btn {
@@ -50,7 +50,6 @@ button.from__button--floating,
     font-weight: 600;
     margin-top: 2rem;
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-    height: 40px;
     line-height: 40px;
     padding: 0 24px;
     position: relative;
@@ -61,14 +60,15 @@ button.from__button--floating,
     border-radius: 6px !important;
 }
 
-.form-group #username {
+.form-group #username,
+#password {
     font-size: 1.5rem;
     line-height: 1.33333;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.9);
     position: relative;
     z-index: 1;
-    height: 52px;
+    height: 10px;
     padding: 28px 12px;
     border-radius: 4px !important;
 }
@@ -76,7 +76,6 @@ button.from__button--floating,
 .form-group .btn {
     padding: 0px;
     width: 4rem;
-    height: 2.5rem;
     font-size: 1rem;
     background-color: rgba(15, 129, 236, 0.2);
     color: black;
@@ -88,4 +87,14 @@ button.from__button--floating,
     -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
     -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
     transition: all .3s cubic-bezier(.165, .84, .44, 1);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 20rem;
+    }
+    .alert {
+        margin-left: -6rem;
+        width: 300px;
+    }
 }

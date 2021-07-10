@@ -1,5 +1,6 @@
+import { AdminService } from './../services/admin/admin-service.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Form, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -14,19 +15,25 @@ export class LoginComponent implements OnInit {
   returnUrl: string |any;
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
+    private adminService: AdminService,
     private router: Router) { }
   userLogin(){
   this.router.navigateByUrl('admin-dashboard/orders')
   }
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
+    this.loginForm = new FormGroup({
+      "username": new FormControl(null, [Validators.required]),
+      "password": new FormControl(null, [Validators.required])
   });
   }
   get f() { return this.loginForm.controls; }
-  onSubmit() {
+  onSubmit(form: FormGroup) {
+    console.log(form.value);
+    this.adminService.adminLogin(form.value).subscribe(data=>{
+      console.log(data);
+    })
     this.submitted = true;
+   
 
     // stop here if form is invalid
     if (this.loginForm.invalid) {
