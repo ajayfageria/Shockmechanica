@@ -1,18 +1,89 @@
-.container{
-    width: 50%;
-} 
+.container {
+    width: 33.5rem;
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    padding: 24px 32px 32px;
+    border-radius: 3px;
+    margin-top: 3.5rem;
+    background: #fff;
+}
+
+.login_header {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+    padding: 0 0 4px 0;
+    font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+.login_sub_heading {
+    font-size: 1.3rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    color: #2d94f3!important;
+    font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+.form__label {
+    top: -10px;
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+button.from__button--floating,
+.from__button--floating {
+    height: 55px;
+    line-height: 52px;
+}
+
+.btn {
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #0D264C !important;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 24px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    background: rgba(15, 129, 236, 0.2) !important;
+    border-radius: 6px !important;
+}
+
+.form-group #username {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+    position: relative;
+    z-index: 1;
+    height: 52px;
+    padding: 28px 12px;
+    border-radius: 4px !important;
+}
+
 .form-group .btn {
-   
     padding: 0px;
     width: 4rem;
     height: 2.5rem;
     font-size: 1rem;
-    background-color: rgba(15, 129, 236, 0.2);;
+    background-color: rgba(15, 129, 236, 0.2);
     color: black;
     border-radius: 5px;
     border-width: 2px;
     border-color: rgba(15, 129, 236, 0.2);
-    padding: 0.3rem 0.2rem;  
+    padding: 0.3rem 0.2rem;
     margin-left: 2rem;
     -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
     -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
