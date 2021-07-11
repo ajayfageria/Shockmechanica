@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CustomerServiceService } from '../services/customer/customer-service.service';
 
 @Component({
   selector: 'app-serviceorder',
@@ -16,7 +17,7 @@ export class ServiceorderComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    // private authenticationService: AuthenticationService,
+    private cusomerService: CustomerServiceService,
     // private alertService: AlertService
 ) {
     // redirect to home if already logged in
@@ -44,20 +45,17 @@ export class ServiceorderComponent implements OnInit {
       // stop here if form is invalid
       if (this.orderForm.invalid) {
           return;
+      }else{
+
+        this.cusomerService.postCustomerData(this.orderForm.value).subscribe((res)=>{
+
+        },(err)=>{
+
+        })
       }
 
       this.loading = true;
-  //     this.authenticationService.order(this.f.username.value, this.f.password.value)
-  //         .pipe(first())
-  //         .subscribe(orderForm
-  //             data => {
-  //                 this.router.navigate([this.returnUrl]);
-  //             },
-  //             error => {
-  //                 this.alertService.error(error);
-  //                 this.loading = false;
-  //             });
-  // }
+      
 
 }
 

@@ -17,7 +17,7 @@ export class AdminService {
     return this.http.post(this.url+"user/register", data);
   }
 
-  public getAdminData(id?:any): Observable<any>{
+  public getCustmerData(id?:any): Observable<any>{
     if(id){
     return this.http.get(this.url+"customer/"+id);
     }else{
@@ -26,7 +26,7 @@ export class AdminService {
     }
   }
 
-  public deleteAdminData(id:any): Observable<any>{
+  public deleteCustomerData(id:any): Observable<any>{
     return this.http.delete(this.url+"customer/"+id); 
 }
 
