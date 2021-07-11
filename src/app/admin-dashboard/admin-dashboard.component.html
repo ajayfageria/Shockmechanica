@@ -1,19 +1,17 @@
-
-
 <div class="container-fluid">
 
-<div class="row">
+    <div class="row">
 
-<div class="col-md-2" style="background-color:aliceblue;">
-    <ul class="navbar-nav ml-auto">
-        <div class = "admin-basic" style="margin-top: 0.5rem;">
-            <p class = "name">ajay kumar</p>
-            <p class = "email">ajayfageria1@gmail.com</p>     
+        <div class="col-md-2" style="background-color:aliceblue;">
+            <ul class="navbar-nav ml-auto">
+                <div class="admin-basic" style="margin-top: 0.5rem;">
+                    <p class="name">ajay kumar</p>
+                    <p class="email">ajayfageria1@gmail.com</p>
+                </div>
+                <li><a class="nav-link">Admin actions</a></li>
+                <li><a class="nav-link" routerLinkActive="active" routerLink="orders">Orders-list</a></li>
+                <li *ngIf="isSuperAdminLoggedIn"><a class="nav-link" routerLinkActive="active" routerLink="create">New admin</a></li>
+            </ul>
         </div>
-         <li><a class="nav-link" >SA actions</a></li> 
-         <li><a class="nav-link" routerLinkActive = "active" routerLink = "orders">Orders-list</a></li>
-        <li><a class="nav-link" routerLinkActive = "active" routerLink = "create">New admin</a></li>
-    </ul>
-</div>
- <router-outlet></router-outlet>
-</div>
+        <router-outlet></router-outlet>
+    </div>

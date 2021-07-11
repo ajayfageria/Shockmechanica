@@ -4,7 +4,7 @@
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     padding: 24px 32px 32px;
     border-radius: 3px;
-    margin-top: 3.5rem;
+    margin-top: 2rem;
     background: #fff;
 }
 
@@ -23,14 +23,6 @@
     font-weight: 400;
     color: #2d94f3!important;
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-}
-
-.form__label {
-    top: -10px;
-    font-size: 1.4rem;
-    line-height: 1.42857;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.9);
 }
 
 button.from__button--floating,

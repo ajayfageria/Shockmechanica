@@ -1,5 +1,4 @@
 .btnStyle .btn {
-    margin-top: 0.4rem;
     padding: 0px;
     border: 0;
     box-sizing: border-box;
@@ -7,10 +6,10 @@
     display: inline-block;
     font-size: 1.4rem;
     color: #0D264C !important;
-    width: 20rem;
-    height: 4rem;
+    width: 17rem;
+    height: 3.5rem;
     font-weight: 600;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
     line-height: 40px;
     padding: 0 24px;
@@ -44,7 +43,7 @@
     font-size: 2.6rem;
     text-align: center;
     color: #0D264C;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 1rem;
 }
 

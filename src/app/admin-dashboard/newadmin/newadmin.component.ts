@@ -1,5 +1,6 @@
+import { AdminService } from './../../services/admin/admin-service.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-newadmin',
@@ -7,29 +8,33 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./newadmin.component.css']
 })
 export class NewadminComponent implements OnInit {
-  registerForm: any ;
+  createadminForm: any ;
   loading = false;
   submitted = false;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private adminService: AdminService) { }
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+    this.createadminForm = new FormGroup({
+      "firstname": new FormControl(null, [Validators.required]),
+      "lastname": new FormControl(null, [Validators.required]),
+      "username": new FormControl(null, [Validators.required]),
+      "password": new FormControl(null, [Validators.required])
   });
   }
-  get f() { return this.registerForm.controls; }
+  get f() { return this.createadminForm.controls; }
 
-  onSubmit() {
+  onSubmit(form: FormGroup) {
+    this.adminService.createAdmin(form.value).subscribe(data=>{
+      console.log(data);
+    })
+    console.log(form.value);
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.registerForm.invalid) {
+      if (this.createadminForm.invalid) {
           return;
       }
-
+   
       this.loading = true;
       // this.userService.register(this.registerForm.value)
       //     .pipe(first())

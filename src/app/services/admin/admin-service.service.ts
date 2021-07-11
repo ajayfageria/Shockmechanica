@@ -11,4 +11,7 @@ export class AdminService {
   public adminLogin(data: any): Observable<any>{
     return this.http.post(this.url+"user/login", data);
   }
+  public createAdmin(data: any): Observable<any>{
+    return this.http.post(this.url+"user/register", data);
+  }
 }

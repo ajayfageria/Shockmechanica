@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     private adminService: AdminService,
     private router: Router) { }
   userLogin(){
-  this.router.navigateByUrl('admin-dashboard/orders')
+  
   }
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.adminService.adminLogin(form.value).subscribe(data=>{
       console.log(data);
     })
+    this.router.navigateByUrl('admin-dashboard/orders')
     this.submitted = true;
    
 
