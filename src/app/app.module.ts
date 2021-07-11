@@ -26,6 +26,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OrdersListComponent } from './admin-dashboard/orders-list/orders-list.component';
 import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceComponent } from './serviceorder/service/service.component';
+
+import { PurchaseComponent } from './serviceorder/purchase/purchase.component';
+import { OthersComponent } from './serviceorder/others/others.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlogComponent,
     AboutUsComponent,
     OrdersListComponent,
-    NewadminComponent
+    NewadminComponent,
+    ServiceComponent,
+    PurchaseComponent,
+    OthersComponent
   
   ],
   imports: [
