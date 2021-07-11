@@ -1,7 +1,7 @@
 .container {
-    width: 100%;
+    width: 90%;
     align-items: center;
-    margin-left: 15rem;
+    margin-left: 20rem;
     margin-top: 1.5rem;
     -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
