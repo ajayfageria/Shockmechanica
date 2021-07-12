@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from 'src/app/services/admin/admin-service.service';
+import { CustomerServiceService } from '../../services/customer/customer-service.service';
 
 @Component({
   selector: 'app-purchase',
@@ -8,33 +9,41 @@ import { AdminService } from 'src/app/services/admin/admin-service.service';
   styleUrls: ['./purchase.component.css']
 })
 export class PurchaseComponent implements OnInit {
-  createadminForm: any ;
+  purchaseForm: any ;
   loading = false;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private adminService: AdminService) { }
+  constructor(private formBuilder: FormBuilder,private adminService: AdminService,private customerService:CustomerServiceService) { }
 
   ngOnInit(): void {
-  this.createadminForm = new FormGroup({
-    "firstname": new FormControl(null, [Validators.required]),
-    "lastname": new FormControl(null, [Validators.required]),
-    "username": new FormControl(null, [Validators.required]),
-    "password": new FormControl(null, [Validators.required])
+  this.purchaseForm = new FormGroup({
+    "part_type": new FormControl(null, [Validators.required]),
+    "number_of_pieces": new FormControl(null, [Validators.required]),
+    "team_name": new FormControl(null, [Validators.required]),
+    "email": new FormControl(null, [Validators.required]),
+    "mobile_number": new FormControl(null, [Validators.required]),
+    "other_requirements": new FormControl(null, [Validators.required]),
 });
 }
 
-get f() { return this.createadminForm.controls; }
+get f() { return this.purchaseForm.controls; }
 
 onSubmit(form: FormGroup) {
-  this.adminService.createAdmin(form.value).subscribe(data=>{
+
+  
+    // stop here if form is invalid
+    if (this.purchaseForm.invalid) {
+      return;
+  }else{
+
+  this.customerService.postCustomerData(form.value).subscribe(data=>{
     console.log(data);
+  },err=>{
+
   })
+  }
   console.log(form.value);
     this.submitted = true;
 
-    // stop here if form is invalid
-    if (this.createadminForm.invalid) {
-        return;
-    }
  
     this.loading = true;
     

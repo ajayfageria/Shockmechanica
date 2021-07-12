@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerServiceService } from 'src/app/services/customer/customer-service.service';
 
@@ -9,7 +9,7 @@ import { CustomerServiceService } from 'src/app/services/customer/customer-servi
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-  orderForm: any;
+  serviceForm: any;
   loading = false;
   submitted = false;
   returnUrl: string |any;
@@ -27,7 +27,7 @@ export class ServiceComponent implements OnInit {
 }
 
   ngOnInit(): void {
-    this.orderForm = this.formBuilder.group({
+    this.serviceForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
       mobile_number: ['', Validators.required],
@@ -37,17 +37,17 @@ export class ServiceComponent implements OnInit {
       problems_facing: ['', Validators.required]
     });
   }
-  get f() { return this.orderForm.controls; }
+  get f() { return this.serviceForm.controls; }
 
-  onSubmit() {
+  onSubmit(form:FormGroup) {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.orderForm.invalid) {
+      if (this.serviceForm.invalid) {
           return;
       }else{
 
-        this.cusomerService.postCustomerData(this.orderForm.value).subscribe((res)=>{
+        this.cusomerService.postCustomerData(form.value).subscribe((res)=>{
 
         },(err)=>{
 
