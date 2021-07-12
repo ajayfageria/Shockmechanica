@@ -10,12 +10,11 @@ import { AdminService } from '../../services/admin/admin-service.service';
 export class OrdersListComponent implements OnInit {
   customerArray: any;
 
-  constructor(private customerService:CustomerServiceService,
-    private adminService:AdminService) { }
+  constructor(private customerService:CustomerServiceService) { }
 
   ngOnInit(): void {
 
-    this.adminService.getCustmerData().subscribe((res)=>{
+    this.customerService.getCustmerData().subscribe((res)=>{
       this.customerArray=res;
     },
     (err)=>{
@@ -25,12 +24,12 @@ export class OrdersListComponent implements OnInit {
   }
 
 
-  // deleteCustomer(customer){
-  //   this.adminService.deleteCustomerData(customer._id).subscribe((res)=>{
+  deleteCustomer(customer: any){
+    this.customerService.deleteCustomerData(customer._id).subscribe((res)=>{
 
-  //   },(err)=>{
+    },(err)=>{
 
-  //   })
-  // }
+    })
+  }
 
 }

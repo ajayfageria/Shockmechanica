@@ -14,5 +14,18 @@ export class CustomerServiceService {
   postCustomerData(data: any): Observable<any>{
     return this.http.post(this.url+"customer/", data);
   }
+  public getCustmerData(id?:any): Observable<any>{
+    if(id){
+    return this.http.get(this.url+"customer/"+id);
+    }else{
+
+    return this.http.get(this.url+"customer/");
+    }
+  }
+
+  public deleteCustomerData(id:any): Observable<any>{
+    return this.http.delete(this.url+"customer/"+id); 
+}
+
   
 }
