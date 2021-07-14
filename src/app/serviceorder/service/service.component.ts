@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerServiceService } from 'src/app/services/customer/customer-service.service';
 
@@ -11,7 +11,7 @@ import { CustomerServiceService } from 'src/app/services/customer/customer-servi
 export class ServiceComponent implements OnInit {
   serviceForm: any;
   loading = false;
-  submitted = false;
+  submitted:boolean = false;
   returnUrl: string |any;
   constructor(
     private formBuilder: FormBuilder,
@@ -27,20 +27,21 @@ export class ServiceComponent implements OnInit {
 }
 
   ngOnInit(): void {
-    this.serviceForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      mobile_number: ['', Validators.required],
-      shocker_brand: ['', Validators.required],
-      number_of_pairs: ['', Validators.required],
-      type_of_service: ['', Validators.required],
-      problems_facing: ['', Validators.required]
+    this.serviceForm = new FormGroup({
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null,Validators.required),
+      mobile_number: new FormControl(null,[Validators.required,Validators.maxLength(10),Validators.minLength(10)]),
+      shocker_brand: new FormControl(null, Validators.required),
+      number_of_pairs: new FormControl(null, Validators.required),
+      type_of_service: new FormControl(null, Validators.required),
+      problems_facing: new FormControl(null, Validators.required)
     });
   }
   get f() { return this.serviceForm.controls; }
 
   onSubmit(form:FormGroup) {
-      this.submitted = true;
+ 
+    this.submitted = true;
 
       // stop here if form is invalid
       if (this.serviceForm.invalid) {
