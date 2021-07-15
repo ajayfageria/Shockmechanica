@@ -1,6 +1,7 @@
 import { AdminService } from './../../services/admin/admin-service.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertService } from 'src/app/services/alert/alert-service.service';
 
 @Component({
   selector: 'app-newadmin',
@@ -11,7 +12,7 @@ export class NewadminComponent implements OnInit {
   createadminForm: any ;
   loading = false;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private adminService: AdminService) { }
+  constructor(private formBuilder: FormBuilder,private adminService: AdminService, private alertService: AlertService) { }
 
   ngOnInit(): void {
     this.createadminForm = new FormGroup({
@@ -26,6 +27,8 @@ export class NewadminComponent implements OnInit {
   onSubmit(form: FormGroup) {
     this.adminService.createAdmin(form.value).subscribe(data=>{
       console.log(data);
+   
+
     })
     console.log(form.value);
       this.submitted = true;

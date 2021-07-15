@@ -32,7 +32,8 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "../Shockmechanica/node_modules/font-awesome/css/font-awesome.css"
+                            "../Shockmechanica/node_modules/font-awesome/css/font-awesome.css",
+                            "../Shockmechanica/node_modules/ngx-toastr/toastr.css"
 
                         ],
                         "scripts": []

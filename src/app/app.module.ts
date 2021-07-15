@@ -27,9 +27,10 @@ import { OrdersListComponent } from './admin-dashboard/orders-list/orders-list.c
 import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceComponent } from './serviceorder/service/service.component';
-
+import { ToastrModule } from 'ngx-toastr';  
 import { PurchaseComponent } from './serviceorder/purchase/purchase.component';
 import { OthersComponent } from './serviceorder/others/others.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,10 @@ import { OthersComponent } from './serviceorder/others/others.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,HttpClientModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,HttpClientModule,
+    ToastrModule.forRoot(
+    )  
   ],
   providers: [],
   bootstrap: [AppComponent]

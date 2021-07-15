@@ -2,6 +2,8 @@ import { AdminService } from './../services/admin/admin-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertService } from '../services/alert/alert-service.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,7 @@ export class LoginComponent implements OnInit {
   returnUrl: string |any;
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    private adminService: AdminService,
+    private adminService: AdminService,private alertService: AlertService,
     private router: Router) { }
   userLogin(){
   
@@ -28,8 +30,11 @@ export class LoginComponent implements OnInit {
   }
   get f() { return this.loginForm.controls; }
   onSubmit(form: FormGroup) {
+    this.alertService.success("LoggedIn Successfully");
+    this.alertService.error("LoggedIn -error");
     console.log(form.value);
     this.adminService.adminLogin(form.value).subscribe(data=>{
+      this.alertService.success("LoggedIn Successfully");
       console.log(data);
     })
     this.router.navigateByUrl('admin-dashboard/orders')
