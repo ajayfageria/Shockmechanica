@@ -24,39 +24,32 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      "username": new FormControl(null,[Validators.required,Validators.pattern('/^[a-z0-9][a-z0-9-_\.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/')]),
+      "email": new FormControl(null,[Validators.required,Validators.email]),
       "password": new FormControl(null, [Validators.required])
   });
   }
   get f() { return this.loginForm.controls; }
   onSubmit(form: FormGroup) {
-    this.alertService.success("LoggedIn Successfully");
-    this.alertService.error("LoggedIn -error");
-    console.log(form.value);
-    this.adminService.adminLogin(form.value).subscribe(data=>{
-      this.alertService.success("LoggedIn Successfully");
-      console.log(data);
-    })
-    this.router.navigateByUrl('admin-dashboard/orders')
-    this.submitted = true;
-   
+    if(form.invalid){
 
-    // stop here if form is invalid
-    if (this.loginForm.invalid) {
-        return;
+      this.alertService.error("LoggedIn -error");
+      return
+    }else{
+
+      console.log(form.value);
+      this.adminService.adminLogin(form.value).subscribe(data=>{
+        this.alertService.success("LoggedIn Successfully");
+        sessionStorage.setItem("token",JSON.stringify(data.token))
+      this.router.navigateByUrl('admin-dashboard/orders')
+        console.log(data);
+      },err=>{
+  
+      })
+      this.submitted = true;
+     
     }
 
     this.loading = true;
-//     this.authenticationService.login(this.f.username.value, this.f.password.value)
-//         .pipe(first())
-//         .subscribe(
-//             data => {
-//                 this.router.navigate([this.returnUrl]);
-//             },
-//             error => {
-//                 this.alertService.error(error);
-//                 this.loading = false;
-//             });
-// }
+
   }
 }

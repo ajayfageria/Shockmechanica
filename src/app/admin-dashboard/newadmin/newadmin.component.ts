@@ -18,7 +18,9 @@ export class NewadminComponent implements OnInit {
     this.createadminForm = new FormGroup({
       "firstname": new FormControl(null, [Validators.required]),
       "lastname": new FormControl(null, [Validators.required]),
-      "username": new FormControl(null, [Validators.required]),
+      "email": new FormControl(null, [Validators.required]),
+      "dob": new FormControl(null, [Validators.required]),
+      "gender": new FormControl(null, [Validators.required]),
       "password": new FormControl(null, [Validators.required])
   });
   }
@@ -27,7 +29,7 @@ export class NewadminComponent implements OnInit {
   onSubmit(form: FormGroup) {
     this.adminService.createAdmin(form.value).subscribe(data=>{
       console.log(data);
-   
+      this.createadminForm.reset()
 
     })
     console.log(form.value);

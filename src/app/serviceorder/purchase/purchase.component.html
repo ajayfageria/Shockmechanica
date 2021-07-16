@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group mt-4">
                     <input id="number_of_pieces" formControlName="number_of_pieces" class="form-control form-field"
-                     type="number" [ngClass]="{ 'is-invalid': submitted && f.lasName?.errors }"  placeholder="Last Name">
+                     type="text" [ngClass]="{ 'is-invalid': submitted && f.lasName?.errors }"  placeholder="Last Name">
                     <div *ngIf="submitted && f.number_of_pieces.errors" class="invalid-feedback">
                         <div *ngIf="f.number_of_pieces.errors.required">Last name is required</div>
                     </div>

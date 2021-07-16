@@ -52,7 +52,7 @@ button.from__button--floating,
     border-radius: 6px !important;
 }
 
-.form-group #username,
+.form-group #email,
 #password {
     font-size: 1.5rem;
     line-height: 1.33333;
