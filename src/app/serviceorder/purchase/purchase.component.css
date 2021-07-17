@@ -1,20 +1,21 @@
 .container {
-    width: 70%;
+    width: 60%;
     align-items: center;
-    margin-left: 10rem;
+    margin-left: 13rem;
     margin-top: 1.5rem;
     -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     padding: 24px 32px 32px;
     border-radius: 3px;
     margin-top: 3.5rem;
-    background: rgb(236, 247, 253);
+    background: rgba(95, 175, 250, 0.2);
 }
 
-textarea{
+textarea {
     min-height: 100px;
     max-height: 150px;
 }
+
 .form-group .form-field {
     font-size: 1.5rem;
     line-height: 1.33333;

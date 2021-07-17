@@ -1,3 +1,4 @@
+import { ManageAdminComponent } from './admin-dashboard/manage-admin/manage-admin.component';
 import { OthersComponent } from './serviceorder/others/others.component';
 import { PurchaseComponent } from './serviceorder/purchase/purchase.component';
 import { OrdersListComponent } from './admin-dashboard/orders-list/orders-list.component';
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path: 'product-list', component: ProductListComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'service-order', component: ServiceorderComponent,
+  {path: 'services', component: ServiceorderComponent,
 children: [
   {path: 'place', component: ServiceComponent},
 {path: 'buy', component: PurchaseComponent},
@@ -32,6 +33,7 @@ children: [
    children: [
     {path: 'orders', component: OrdersListComponent},
     {path: 'create', component: NewadminComponent},
+    {path: 'manage-admin', component: ManageAdminComponent},
    ]
 },
 

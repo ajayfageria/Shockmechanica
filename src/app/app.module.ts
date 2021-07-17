@@ -31,6 +31,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { PurchaseComponent } from './serviceorder/purchase/purchase.component';
 import { OthersComponent } from './serviceorder/others/others.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ManageAdminComponent } from './admin-dashboard/manage-admin/manage-admin.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -58,11 +60,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NewadminComponent,
     ServiceComponent,
     PurchaseComponent,
-    OthersComponent
+    OthersComponent,
+    ManageAdminComponent
   
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,Ng2SearchPipeModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,

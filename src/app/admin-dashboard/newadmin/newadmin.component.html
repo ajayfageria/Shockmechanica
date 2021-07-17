@@ -9,7 +9,7 @@
         <div class="row-sm-9">
             <form [formGroup]="createadminForm" (ngSubmit)="onSubmit(createadminForm)">
                 <div class="form-group mt-4">
-                    <input id="firstname" formControlName="firstname" class="form-control" type="text" [ngClass]="{ 'is-invalid': submitted && f.firstname?.errors }"  placeholder="First name">
+                    <input id="firstname" formControlName="firstname" class="form-control form-style" type="text" [ngClass]="{ 'is-invalid': submitted && f.firstname?.errors }" placeholder="First name">
                     <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
                         <div *ngIf="f.firstname.errors.required">First name is required</div>
                         <!-- <div error-for="email" id="error-for-email" role="alert" aria-live="assertive">Couldn’t find TSM account associated with this email. Please try again.</div> -->
@@ -17,34 +17,48 @@
 
                 </div>
                 <div class="form-group mt-4">
-                    <input id="lastname" formControlName="lastname" class="form-control" type="text" [ngClass]="{ 'is-invalid': submitted && f.lastname?.errors }" required placeholder="Last name">
+                    <input id="lastname" formControlName="lastname" class="form-control form-style" type="text" [ngClass]="{ 'is-invalid': submitted && f.lastname?.errors }" required placeholder="Last name">
                     <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
                         <div *ngIf="f.lastname.errors.required">Last name is required</div>
                     </div>
                 </div>
                 <div class="form-group mt-4">
-                    <input id="email" formControlName="email" class="form-control" type="text" [ngClass]="{ 'is-invalid': submitted && f.email?.errors }"  placeholder="Email">
+                    <input id="email" formControlName="email" class="form-control form-style" type="text" [ngClass]="{ 'is-invalid': submitted && f.email?.errors }" placeholder="Email">
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                         <div *ngIf="f.email.errors.required">email is required</div>
                     </div>
 
                 </div>
                 <div class="form-group mt-4">
-                    <input id="dob" formControlName="dob" class="form-control" type="date" [ngClass]="{ 'is-invalid': submitted && f.dob?.errors }"  placeholder="dob">
+                    <input id="dob" formControlName="dob" class="form-control form-style" type="date" [ngClass]="{ 'is-invalid': submitted && f.dob?.errors }" placeholder="dob">
                     <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
                         <div *ngIf="f.dob.errors.required">dob is required</div>
                     </div>
 
                 </div>
                 <div class="form-group mt-4">
-                    <input id="gender" formControlName="gender" class="form-control" type="text" [ngClass]="{ 'is-invalid': submitted && f.gender?.errors }"  placeholder="gender">
+
+                    <select class="form-control" id="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Transgender</option>
+                      </select>
+
+
+
+
+
+
+
+                    <!-- 
+                    <input id="gender" formControlName="gender" class="form-control form-style" type="text" [ngClass]="{ 'is-invalid': submitted && f.gender?.errors }" placeholder="gender">
                     <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
                         <div *ngIf="f.gender.errors.required">gender is required</div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="form-group mt-4">
-                    <input type="password" id="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password?.errors }"  placeholder="Password" />
+                    <input type="password" id="password" formControlName="password" class="form-control form-style" [ngClass]="{ 'is-invalid': submitted && f.password?.errors }" placeholder="Password" />
                     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                         <div *ngIf="f.password.errors.required">Password is required</div>
                     </div>

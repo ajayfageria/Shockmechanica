@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-sm">
         <div class="row-sm-2 login_header">
-            Register new admin
+            <i class="fa fa-shopping-cart"></i> &nbsp;Place order
         </div>
         <div class="row-sm-1 login_sub_heading">
             Grow TSM!
@@ -25,7 +25,7 @@
                     <input id="mobile_number" formControlName="mobile_number" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.mobile_number?.errors }" required placeholder="Mobile Number">
                     <div *ngIf="submitted && f.mobile_number.errors" class="invalid-feedback">
                         <div *ngIf="f.mobile_number.errors.required">mobile_number is required</div>
-                         <div *ngIf="f.mobile_number.errors.minlength">Password must be at least 6 characters</div>
+                        <div *ngIf="f.mobile_number.errors.minlength">Password must be at least 6 characters</div>
                     </div>
 
                 </div>
@@ -54,13 +54,13 @@
 
 
                 <div class="form-group mt-4">
-                    <textarea type="textarea" id="problems_facing" formControlName="problems_facing" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.problems_facing?.errors }" required placeholder="Problems Facing" ></textarea>
+                    <textarea type="textarea" id="problems_facing" formControlName="problems_facing" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.problems_facing?.errors }" required placeholder="Problems Facing"></textarea>
                     <div *ngIf="submitted && f.problems_facing.errors" class="invalid-feedback">
                         <div *ngIf="f.problems_facing.errors.required">problems_facing is required</div>
                     </div>
                 </div>
 
-                <button class="btn from__button--floating" type="submit">Submit Order</button>
+                <button class="btn from__button--floating" type="submit">Submit</button>
             </form>
         </div>
     </div>

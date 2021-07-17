@@ -9,8 +9,10 @@
                     <p class="email">ajayfageria1@gmail.com</p>
                 </div>
                 <li><a class="nav-link">Admin actions</a></li>
-                <li><a class="nav-link" routerLinkActive="active" routerLink="orders">Orders-list</a></li>
-                <li *ngIf="isSuperAdminLoggedIn"><a class="nav-link" routerLinkActive="active" routerLink="create">New admin</a></li>
+                <li><a class="nav-link" routerLinkActive="active" routerLink="orders">Orders-list <i class="fa fa-list"></i></a> </li>
+                <li *ngIf="isSuperAdminLoggedIn"><a class="nav-link" routerLinkActive="active" routerLink="manage-admin">Admin List <i class="fa fa-users"></i> </a></li>
+                <li *ngIf="isSuperAdminLoggedIn"><a class="nav-link" routerLinkActive="active" routerLink="create">New admin <i class="fa fa-user-plus"></i></a></li>
+
             </ul>
         </div>
         <router-outlet></router-outlet>

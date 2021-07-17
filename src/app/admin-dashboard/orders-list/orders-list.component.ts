@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerServiceService } from '../../services/customer/customer-service.service';
 import { AdminService } from '../../services/admin/admin-service.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-orders-list',
@@ -8,19 +9,26 @@ import { AdminService } from '../../services/admin/admin-service.service';
   styleUrls: ['./orders-list.component.css']
 })
 export class OrdersListComponent implements OnInit {
-  customerArray: any;
+  customerList: any[] | undefined;
+  searchText: string = '';
+  data$ = new Subject<any>();
 
   constructor(private customerService:CustomerServiceService) { }
 
   ngOnInit(): void {
 
-    this.customerService.getCustmerData().subscribe((res)=>{
-      this.customerArray=res;
+    this.customerService.getCustmerData().subscribe((customerdata)=>{
+      this.customerList = customerdata;
+      this.data$.next(customerdata);
     },
     (err)=>{
 
     })
 
+  }
+  filter(search: any) {
+    this.data$.next(this.customerList?.filter(d=>d.includes(search)));
+    console.log(this.data$);
   }
 
 

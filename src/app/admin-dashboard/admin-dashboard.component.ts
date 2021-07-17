@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SuperAdminService } from '../services/super-admin/super-admin.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -11,8 +10,7 @@ export class AdminDashboardComponent implements OnInit {
   // user: Object | undefined;
   userData: any;
   user: any;
-  adminArray: any;
-  constructor(private SuperAdminService:SuperAdminService) { }
+  constructor() { }
 
   ngOnInit(): void {
   this.user=sessionStorage.getItem("user");
@@ -20,11 +18,6 @@ export class AdminDashboardComponent implements OnInit {
   this.userData=JSON.parse(this.user);
 
 
-  this.SuperAdminService.getAdmin().subscribe(res=>{
-    this.adminArray=res;
-  },err=>{
-
-  })
   }
 
 
