@@ -25,9 +25,9 @@
                         <td>{{data.gender}}</td>
                         <td>{{data.dob}}</td>
                         <td>
-                            <i class="fa fa-edit fa-2x" aria-hidden="true"> </i> &nbsp;&nbsp;
+                            <i class="fa fa-edit fa-2x" aria-hidden="true" (click)="updateAdmin(data)"  > </i> &nbsp;&nbsp;
 
-                            <i class="fa fa-trash fa-2x" aria-hidden="true"> </i>
+                            <i class="fa fa-trash fa-2x" aria-hidden="true" (click)="deleteAdmin(data)" > </i>
 
                         </td>
                     </tr>

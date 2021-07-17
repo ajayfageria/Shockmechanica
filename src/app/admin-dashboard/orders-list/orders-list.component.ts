@@ -17,6 +17,11 @@ export class OrdersListComponent implements OnInit {
 
   ngOnInit(): void {
 
+this.getCustomerData();
+  }
+
+  getCustomerData(){
+
     this.customerService.getCustmerData().subscribe((customerdata)=>{
       this.customerList = customerdata;
       this.data$.next(customerdata);
@@ -24,7 +29,6 @@ export class OrdersListComponent implements OnInit {
     (err)=>{
 
     })
-
   }
   filter(search: any) {
     this.data$.next(this.customerList?.filter(d=>d.includes(search)));
@@ -34,7 +38,7 @@ export class OrdersListComponent implements OnInit {
 
   deleteCustomer(customer: any){
     this.customerService.deleteCustomerData(customer._id).subscribe((res)=>{
-
+      this.getCustomerData();
     },(err)=>{
 
     })
