@@ -12,6 +12,8 @@ export class OrdersListComponent implements OnInit {
   customerList: any[] | undefined;
   searchText: string = '';
   data$ = new Subject<any>();
+  serviceData: any;
+  purchaseData: any;
 
   constructor(private customerService:CustomerServiceService) { }
 
@@ -23,6 +25,11 @@ this.getCustomerData();
   getCustomerData(){
 
     this.customerService.getCustmerData().subscribe((customerdata)=>{
+      this.serviceData=customerdata.filter((value:any)=>value.service_form==true);
+
+
+      this.purchaseData=customerdata.filter((value:any)=>value.purchase_form==true);
+
       this.customerList = customerdata;
       this.data$.next(customerdata);
     },
@@ -30,6 +37,8 @@ this.getCustomerData();
 
     })
   }
+
+
   filter(search: any) {
     this.data$.next(this.customerList?.filter(d=>d.includes(search)));
     console.log(this.data$);

@@ -16,6 +16,22 @@
 
                 </div>
                 <div class="form-group mt-4">
+                    <input id="service_form" hidden formControlName="service_form" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.service_form?.errors }" placeholder="service_form">
+                    <div *ngIf="submitted && f.service_form.errors" class="invalid-feedback">
+                        <div *ngIf="f.service_form.errors.required">Part Name is required</div>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group mt-4">
+                    <input id="team_name"  formControlName="team_name" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.team_name?.errors }" placeholder="team_name">
+                    <div *ngIf="submitted && f.team_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.team_name.errors.required">Part Name is required</div>
+                    </div>
+
+                </div>
+                <div class="form-group mt-4">
                     <input id="email" formControlName="email" class="form-control form-field" type="email" [ngClass]="{ 'is-invalid': submitted && f.email?.errors }" required placeholder="Email">
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                         <div *ngIf="f.email.errors.required">Email is required</div>

@@ -9,16 +9,27 @@
         <div class="row-sm-9">
             <form [formGroup]="purchaseForm" (ngSubmit)="onSubmit(purchaseForm)">
                 <div class="form-group mt-4">
-                    <input id="part_type" formControlName="part_type" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.part_type?.errors }" placeholder="First Name">
+                    <input id="part_type" formControlName="part_type" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.part_type?.errors }" placeholder="part_type">
                     <div *ngIf="submitted && f.part_type.errors" class="invalid-feedback">
                         <div *ngIf="f.part_type.errors.required">Part Name is required</div>
                     </div>
 
                 </div>
+
                 <div class="form-group mt-4">
-                    <input id="number_of_pieces" formControlName="number_of_pieces" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.lasName?.errors }" placeholder="Last Name">
-                    <div *ngIf="submitted && f.number_of_pieces.errors" class="invalid-feedback">
-                        <div *ngIf="f.number_of_pieces.errors.required">Last name is required</div>
+                    <input id="purchase_form" hidden formControlName="purchase_form" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.purchase_form?.errors }" placeholder="purchase_form">
+                    <div *ngIf="submitted && f.purchase_form.errors" class="invalid-feedback">
+                        <div *ngIf="f.purchase_form.errors.required">Part Name is required</div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group mt-4">
+                    <input id="number_of_peices" formControlName="number_of_peices" class="form-control form-field" type="number" [ngClass]="{ 'is-invalid': submitted && f.lasName?.errors }" placeholder="number_of_peices">
+                    <div *ngIf="submitted && f.number_of_peices.errors" class="invalid-feedback">
+                        <div *ngIf="f.number_of_peices.errors.required">Last name is required</div>
                     </div>
                 </div>
                 <div class="form-group mt-4">
@@ -45,9 +56,17 @@
 
 
                 <div class="form-group mt-4">
-                    <textarea type="text" id="other_requirements" formControlName="other_requirements" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.other_requirements?.errors }" placeholder="Other Requirements"></textarea>
-                    <div *ngIf="submitted && f.other_requirements.errors" class="invalid-feedback">
-                        <div *ngIf="f.other_requirements.errors.required">other_requirements is required</div>
+                    <input id="name"  formControlName="name" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.name?.errors }" placeholder="name">
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Part Name is required</div>
+                    </div>
+
+                </div>
+
+                <div class="form-group mt-4">
+                    <textarea type="text" id="other_requirement" formControlName="other_requirement" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.other_requirement?.errors }" placeholder="Other Requirements"></textarea>
+                    <div *ngIf="submitted && f.other_requirement.errors" class="invalid-feedback">
+                        <div *ngIf="f.other_requirement.errors.required">other_requirement is required</div>
                     </div>
                 </div>
 

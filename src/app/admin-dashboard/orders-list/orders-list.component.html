@@ -12,32 +12,70 @@
 
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Mobile</th>
+                    <th>Mobile</th> 
                     <th>Team Name</th>
-                    <th>Pair/pieces</th>
-                    <th>Part type</th>
+                    <th>Pairs</th>
                     <th>Problem</th>
                     <th>Shocker Brand</th>
-                    <th>Service type</th>
-                    <th>Shocker type</th>
-                    <th>Others</th>
+                    <th>Type Of Service</th>
                     <th>Actions</th>
 
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let customer of customerList | filter:searchText">
+                <tr *ngFor="let customer of serviceData | filter:searchText">
 
                     <td>{{customer.name}}</td>
                     <td>{{customer.email}}</td>
                     <td>{{customer.mobile_number}}</td>
                     <td>{{customer.team_name}}</td>
-                    <td>{{customer.number_of_pairs}}/{{customer.number_of_peices}}</td>
-                    <td>{{customer.part_type}}</td>
+                    <td>{{customer.number_of_pairs}}</td>
                     <td>{{customer.problems_facing}}</td>
                     <td>{{customer.shocker_brand}}</td>
-                    <td>{{customer.type_of_service}}</td>
-                    <td>{{customer.type_of_shocker}}</td>
+                    <td>{{customer.type_of_service}}</td>   
+                    <td><i class="fa fa-trash fa-2x" aria-hidden="true" (click)="deleteCustomer(customer)"> </i></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="col-sm" style="background-color: aliceblue">
+
+
+    <input class="form-control mr-sm-2" type="search" placeholder="Type something here..." [(ngModel)]="searchText">
+
+
+
+    <div class="table-responsive" style="zoom:73%">
+        <table class="table table-striped table-bordered table-md table-light table-responsive">
+            <thead>
+                <tr>
+
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Team Name</th>
+                    <th>pieces</th>
+                    <th>Part type</th>
+                  
+               
+                    <th>Other requirements</th>
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of purchaseData | filter:searchText">
+
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.mobile_number}}</td>
+                    <td>{{customer.team_name}}</td>
+                    <td>{{customer.number_of_peices}}</td>
+                    <td>{{customer.part_type}}</td>
                     <td>{{customer.other_requirement}}</td>
                     <td><i class="fa fa-trash fa-2x" aria-hidden="true" (click)="deleteCustomer(customer)"> </i></td>
                 </tr>

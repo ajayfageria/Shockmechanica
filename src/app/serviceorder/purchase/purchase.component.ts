@@ -16,12 +16,15 @@ export class PurchaseComponent implements OnInit {
 
   ngOnInit(): void {
   this.purchaseForm = new FormGroup({
+
+    "purchase_form": new FormControl(true),
     "part_type": new FormControl(null, [Validators.required]),
-    "number_of_pieces": new FormControl(null, [Validators.required]),
+    "name": new FormControl(null, [Validators.required]),
+    "number_of_peices": new FormControl(null, [Validators.required]),
     "team_name": new FormControl(null, [Validators.required]),
     "email": new FormControl(null, [Validators.required,Validators.email]),
     "mobile_number": new FormControl(null, [Validators.required,Validators.maxLength(10),Validators.minLength(10)]),
-    "other_requirements": new FormControl(null, [Validators.required,Validators.maxLength(100)]),
+    "other_requirement": new FormControl(null, [Validators.required,Validators.maxLength(100)]),
 });
 // this.f();
 }

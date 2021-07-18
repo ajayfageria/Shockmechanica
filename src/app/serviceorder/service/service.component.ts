@@ -28,10 +28,12 @@ export class ServiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.serviceForm = new FormGroup({
+    service_form: new FormControl(true),
       name: new FormControl(null, Validators.required),
       email: new FormControl(null,Validators.required),
       mobile_number: new FormControl(null,[Validators.required,Validators.maxLength(10),Validators.minLength(10)]),
       shocker_brand: new FormControl(null, Validators.required),
+      team_name:new FormControl(null, Validators.required),
       number_of_pairs: new FormControl(null, Validators.required),
       type_of_service: new FormControl(null, Validators.required),
       problems_facing: new FormControl(null, Validators.required)
