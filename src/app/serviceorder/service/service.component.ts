@@ -54,6 +54,7 @@ export class ServiceComponent implements OnInit {
         this.cusomerService.postCustomerData(form.value).subscribe((res)=>{
           this.alertService.success("Order has been placed successfully!")
           this.serviceForm.reset();
+          this.submitted=false;
         },(err)=>{
           this.alertService.success("Error! please try again")
         })
