@@ -24,7 +24,7 @@ export class PurchaseComponent implements OnInit {
     "part_type": new FormControl(null, [Validators.required]),
     "email": new FormControl(null, [Validators.required,Validators.email]),
     "mobile_number": new FormControl(null, [Validators.required,Validators.maxLength(10),Validators.minLength(10)]),
-    "number_of_pieces": new FormControl(null, [Validators.required]),
+    "number_of_pieces": new FormControl(null, [Validators.required, Validators.min(1),Validators.max(15)]),
     "other_requirements": new FormControl(null, [Validators.maxLength(100)]),
 });
 
