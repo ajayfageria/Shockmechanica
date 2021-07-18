@@ -23,7 +23,7 @@ export class NewadminComponent implements OnInit {
       "last_name": new FormControl(null, [Validators.required]),
       "email": new FormControl(null, [Validators.required]),
       "dob": new FormControl(null, [Validators.required]),
-      "gender": new FormControl(null, [Validators.required]),
+      "gender": new FormControl("male", [Validators.required]),
       "password": new FormControl(null, [Validators.required])
   });
 
@@ -47,30 +47,41 @@ export class NewadminComponent implements OnInit {
   get f() { return this.createadminForm.controls; }
 
   onSubmit(form: FormGroup) {
+
+    this.submitted = true;
+
     if(this.setData==true){
 
+
+      // stop here if form is invalid
+      if (this.createadminForm.invalid) {
+        return;
+    }else{
       this.adminService.updateAdminData(form.value,this.adminData._id).subscribe((res)=>{
         this.alertService.success("Record has been updated successfully!");
-        sessionStorage.clear();
+        sessionStorage.removeItem("admin");
         this.createadminForm.reset();
+        this.submitted=false;
       },(err)=>{
         this.alertService.success("Error! Record is not updated");
       })
+    }
 
+    }else{
+
+      // stop here if form is invalid
+      if (this.createadminForm.invalid) {
+        return;
     }else{
 
     this.adminService.createAdmin(form.value).subscribe(data=>{
       console.log(data);
       this.createadminForm.reset();
+      this.submitted=false;
 
     })
-    console.log(form.value);
-      this.submitted = true;
+    }
 
-      // stop here if form is invalid
-      if (this.createadminForm.invalid) {
-          return;
-      }
    
       this.loading = true;
     }

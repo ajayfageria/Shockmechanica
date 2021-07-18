@@ -46,6 +46,8 @@ onSubmit(form: FormGroup) {
   this.customerService.postCustomerData(form.value).subscribe(data=>{
     this.alertService.success("Order has been placed successfully!")
     this.purchaseForm.reset();
+
+    this.submitted=false;
   },err=>{
     this.alertService.error("Error! please try again")
   })

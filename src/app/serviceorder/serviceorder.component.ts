@@ -48,7 +48,8 @@ export class ServiceorderComponent implements OnInit {
       }else{
 
         this.cusomerService.postCustomerData(this.orderForm.value).subscribe((res)=>{
-
+          this.orderForm.reset();
+          this.submitted=false;
         },(err)=>{
 
         })
