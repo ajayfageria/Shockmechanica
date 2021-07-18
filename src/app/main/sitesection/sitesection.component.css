@@ -19,17 +19,6 @@
     vertical-align: middle;
     background: rgba(15, 129, 236, 0.2) !important;
     border-radius: 6px !important;
-    /* width: 15rem;
-    height: 4rem;
-    font-size: 1rem;
-    background-color: white;
-    color: #0D264C;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: rgba(15, 129, 236, 0.2);
-    -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
-    -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
-    transition: all .3s cubic-bezier(.165, .84, .44, 1); */
 }
 
 .company-name {

@@ -40,7 +40,7 @@
                 <div class="form-group mt-4">
                     <input id="mobile_number" formControlName="mobile_number" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.mobile_number?.errors }" required placeholder="Mobile Number">
                     <div *ngIf="submitted && f.mobile_number.errors" class="invalid-feedback">
-                        <div *ngIf="f.mobile_number.errors.required">mobile_number is required</div>
+                        <div *ngIf="f.mobile_number.errors.required">Mobile number is required</div>
                         <div *ngIf="f.mobile_number.errors.minlength">Password must be at least 6 characters</div>
                     </div>
 
@@ -48,14 +48,16 @@
                 <div class="form-group mt-4">
                     <input type="text" id="shocker_brand" formControlName="shocker_brand" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.shocker_brand?.errors }" required placeholder="Shocker Brand" />
                     <div *ngIf="submitted && f.shocker_brand.errors" class="invalid-feedback">
-                        <div *ngIf="f.shocker_brand.errors.required">shocker_brand is required</div>
+                        <div *ngIf="f.shocker_brand.errors.required">Shcoker brand is required</div>
                     </div>
                 </div>
 
                 <div class="form-group mt-4">
                     <input type="number" id="number_of_pairs" formControlName="number_of_pairs" min="0" max="100" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.number_of_pairs?.errors }" required placeholder="Number Of Pairs" />
                     <div *ngIf="submitted && f.number_of_pairs.errors" class="invalid-feedback">
-                        <div *ngIf="f.number_of_pairs.errors.required">number_of_pairs is required</div>
+                        <div *ngIf="f.number_of_pairs.errors.required">Number of pair is required</div>
+                        <div *ngIf="f.number_of_pairs.errors.min || f.number_of_pairs.errors.max">Number of pair must be in between 0 and 10.</div>
+
                     </div>
                 </div>
 
@@ -63,17 +65,17 @@
                 <div class="form-group mt-4">
                     <input type="text" id="type_of_service" formControlName="type_of_service" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.type_of_service?.errors }" required placeholder="Type Of Service" />
                     <div *ngIf="submitted && f.type_of_service.errors" class="invalid-feedback">
-                        <div *ngIf="f.type_of_service.errors.required">type_of_service is required</div>
+                        <div *ngIf="f.type_of_service.errors.required">Type of Service is required</div>
                     </div>
                 </div>
 
 
 
                 <div class="form-group mt-4">
-                    <textarea type="textarea" id="problems_facing" formControlName="problems_facing" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.problems_facing?.errors }" required placeholder="Problems Facing"></textarea>
-                    <div *ngIf="submitted && f.problems_facing.errors" class="invalid-feedback">
-                        <div *ngIf="f.problems_facing.errors.required">problems_facing is required</div>
-                    </div>
+                    <textarea type="textarea" id="problems_facing" formControlName="problems_facing" class="form-control form-field" placeholder="Problems Facing"></textarea>
+                    <!-- <div *ngIf="submitted && f.problems_facing.errors" class="invalid-feedback">
+                        <div *ngIf="f.problems_facing.errors.required">Problem facing is required</div>
+                    </div> -->
                 </div>
 
                 <button class="btn from__button--floating" type="submit">Submit</button>

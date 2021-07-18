@@ -2,6 +2,7 @@ import { SuperAdminService } from './../../services/super-admin/super-admin.serv
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/services/admin/admin-service.service';
 import { Router } from '@angular/router';
+import { AlertService } from 'src/app/services/alert/alert-service.service';
 
 @Component({
   selector: 'app-manage-admin',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class ManageAdminComponent implements OnInit {
   adminList: any[] | undefined;
   constructor(private superAdminService: SuperAdminService,
-    private adminService:AdminService,
+    private adminService:AdminService,private alertService: AlertService,
     private router:Router) { }
 
   ngOnInit(): void {
@@ -30,8 +31,10 @@ export class ManageAdminComponent implements OnInit {
   deleteAdmin(data:any){
     var id=data?._id;
     this.adminService.deleteAdmin(id).subscribe((res)=>{
+      this.alertService.success("Record has been deleted successfully!");
       this.getAdminData();
     },(err)=>{
+      this.alertService.error("Error! please try again");
     })
   }
 

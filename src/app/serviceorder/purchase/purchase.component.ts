@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from 'src/app/services/admin/admin-service.service';
+import { AlertService } from 'src/app/services/alert/alert-service.service';
 import { CustomerServiceService } from '../../services/customer/customer-service.service';
 
 @Component({
@@ -12,7 +13,9 @@ export class PurchaseComponent implements OnInit {
   purchaseForm: any ;
   loading = false;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private adminService: AdminService,private customerService:CustomerServiceService) { }
+  constructor(
+    private customerService:CustomerServiceService,
+    private alertService: AlertService) { }
 
   ngOnInit(): void {
   this.purchaseForm = new FormGroup({
@@ -26,7 +29,7 @@ export class PurchaseComponent implements OnInit {
     "mobile_number": new FormControl(null, [Validators.required,Validators.maxLength(10),Validators.minLength(10)]),
     "other_requirement": new FormControl(null, [Validators.required,Validators.maxLength(100)]),
 });
-// this.f();
+
 }
 
 get f() { return this.purchaseForm.controls; }
@@ -41,15 +44,13 @@ onSubmit(form: FormGroup) {
   }else{
 
   this.customerService.postCustomerData(form.value).subscribe(data=>{
-    console.log(data);
+    this.alertService.success("Order has been placed successfully!")
+    this.purchaseForm.reset();
   },err=>{
-
+    this.alertService.error("Error! please try again")
   })
   }
   console.log(form.value);
-    this.submitted = true;
-
- 
     this.loading = true;
     
 }
