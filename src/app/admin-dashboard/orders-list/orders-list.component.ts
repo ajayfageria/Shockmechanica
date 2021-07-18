@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomerServiceService } from '../../services/customer/customer-service.service';
 import { AdminService } from '../../services/admin/admin-service.service';
 import { Subject } from 'rxjs';
+import { AlertService } from 'src/app/services/alert/alert-service.service';
 
 @Component({
   selector: 'app-orders-list',
@@ -13,7 +14,7 @@ export class OrdersListComponent implements OnInit {
   searchText: string = '';
   data$ = new Subject<any>();
 
-  constructor(private customerService:CustomerServiceService) { }
+  constructor(private customerService:CustomerServiceService, private alertService: AlertService) { }
 
   ngOnInit(): void {
 
@@ -30,17 +31,13 @@ this.getCustomerData();
 
     })
   }
-  filter(search: any) {
-    this.data$.next(this.customerList?.filter(d=>d.includes(search)));
-    console.log(this.data$);
-  }
-
 
   deleteCustomer(customer: any){
     this.customerService.deleteCustomerData(customer._id).subscribe((res)=>{
       this.getCustomerData();
+      this.alertService.success("Record has been deleted successfully!")
     },(err)=>{
-
+      this.alertService.error("Error! Please try again")
     })
   }
 

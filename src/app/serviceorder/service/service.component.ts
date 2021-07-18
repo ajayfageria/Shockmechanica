@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertService } from 'src/app/services/alert/alert-service.service';
 import { CustomerServiceService } from 'src/app/services/customer/customer-service.service';
 
 @Component({
@@ -18,7 +19,7 @@ export class ServiceComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private cusomerService: CustomerServiceService,
-    // private alertService: AlertService
+   private alertService: AlertService
 ) {
     // redirect to home if already logged in
     // if (this.authenticationService.currentUserValue) { 
@@ -49,9 +50,10 @@ export class ServiceComponent implements OnInit {
       }else{
 
         this.cusomerService.postCustomerData(form.value).subscribe((res)=>{
-
+          this.alertService.success("Order has been placed successfully!")
+          this.serviceForm.reset();
         },(err)=>{
-
+          this.alertService.success("Error! please try again")
         })
       }
 

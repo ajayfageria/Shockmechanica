@@ -17,8 +17,7 @@ export class NewadminComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,private adminService: AdminService, private alertService: AlertService) { }
 
   ngOnInit(): void {
-
-
+   
     this.createadminForm = new FormGroup({
       "first_name": new FormControl(null, [Validators.required]),
       "last_name": new FormControl(null, [Validators.required]),
@@ -51,9 +50,11 @@ export class NewadminComponent implements OnInit {
     if(this.setData==true){
 
       this.adminService.updateAdminData(form.value,this.adminData._id).subscribe((res)=>{
-
+        this.alertService.success("Record has been updated successfully!");
+        sessionStorage.clear();
+        this.createadminForm.reset();
       },(err)=>{
-
+        this.alertService.success("Error! Record is not updated");
       })
 
     }else{
@@ -73,17 +74,7 @@ export class NewadminComponent implements OnInit {
    
       this.loading = true;
     }
-      // this.userService.register(this.registerForm.value)
-      //     .pipe(first())
-      //     .subscribe(
-      //         data => {
-      //             this.alertService.success('Registration successful', true);
-      //             this.router.navigate(['/login']);
-      //         },
-      //         error => {
-      //             this.alertService.error(error);
-      //             this.loading = false;
-      //         });
+      
   }
 
 }
