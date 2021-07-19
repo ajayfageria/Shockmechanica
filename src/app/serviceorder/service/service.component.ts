@@ -50,7 +50,6 @@ export class ServiceComponent implements OnInit {
       if (this.serviceForm.invalid) {
           return;
       }else{
-
         this.cusomerService.postCustomerData(form.value).subscribe((res)=>{
           this.alertService.success("Order has been placed successfully!")
           this.serviceForm.reset();

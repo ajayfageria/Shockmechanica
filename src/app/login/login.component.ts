@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
   get f() { return this.loginForm.controls; }
   login(form: FormGroup) {
+    this.submitted = true;
     if(form.invalid){
 
       this.alertService.error("LoggedIn -error");
@@ -46,7 +47,7 @@ export class LoginComponent implements OnInit {
       },err=>{
   
       })
-      this.submitted = true;
+   
      
     }
 

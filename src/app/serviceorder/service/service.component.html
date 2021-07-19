@@ -16,22 +16,6 @@
 
                 </div>
                 <div class="form-group mt-4">
-                    <input id="service_form" hidden formControlName="service_form" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.service_form?.errors }" placeholder="service_form">
-                    <div *ngIf="submitted && f.service_form.errors" class="invalid-feedback">
-                        <div *ngIf="f.service_form.errors.required">Part Name is required</div>
-                    </div>
-
-                </div>
-
-
-                <div class="form-group mt-4">
-                    <input id="team_name"  formControlName="team_name" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.team_name?.errors }" placeholder="team_name">
-                    <div *ngIf="submitted && f.team_name.errors" class="invalid-feedback">
-                        <div *ngIf="f.team_name.errors.required">Part Name is required</div>
-                    </div>
-
-                </div>
-                <div class="form-group mt-4">
                     <input id="email" formControlName="email" class="form-control form-field" type="email" [ngClass]="{ 'is-invalid': submitted && f.email?.errors }" required placeholder="Email">
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                         <div *ngIf="f.email.errors.required">Email is required</div>
@@ -46,6 +30,13 @@
 
                 </div>
                 <div class="form-group mt-4">
+                    <input id="team_name" formControlName="team_name" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.team_name?.errors }" placeholder="Team name">
+                    <div *ngIf="submitted && f.team_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.team_name.errors.required">Team Name is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-4">
                     <input type="text" id="shocker_brand" formControlName="shocker_brand" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.shocker_brand?.errors }" required placeholder="Shocker Brand" />
                     <div *ngIf="submitted && f.shocker_brand.errors" class="invalid-feedback">
                         <div *ngIf="f.shocker_brand.errors.required">Shcoker brand is required</div>
@@ -53,11 +44,10 @@
                 </div>
 
                 <div class="form-group mt-4">
-                    <input type="number" id="number_of_pairs" formControlName="number_of_pairs" min="0" max="100" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.number_of_pairs?.errors }" required placeholder="Number Of Pairs" />
+                    <input type="number" id="number_of_pairs" formControlName="number_of_pairs" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.number_of_pairs?.errors }" required placeholder="Number Of Pairs" />
                     <div *ngIf="submitted && f.number_of_pairs.errors" class="invalid-feedback">
                         <div *ngIf="f.number_of_pairs.errors.required">Number of pair is required</div>
                         <div *ngIf="f.number_of_pairs.errors.min || f.number_of_pairs.errors.max">Number of pair must be in between 0 and 10.</div>
-
                     </div>
                 </div>
 
@@ -72,12 +62,15 @@
 
 
                 <div class="form-group mt-4">
-                    <textarea type="textarea" id="problems_facing" formControlName="problems_facing" 
-                    class="form-control form-field" placeholder="Problems Facing"></textarea>
-                    <!-- <div *ngIf="submitted && f.problems_facing.errors" class="invalid-feedback">
-                        <div *ngIf="f.problems_facing.errors.required">Problem facing is required</div>
-                    </div> -->
+                    <textarea type="textarea" id="problems_facing" formControlName="problems_facing" class="form-control form-field" placeholder="Problems Facing"></textarea>
                 </div>
+                <div class="form-group mt-4">
+                    <input id="service_form" hidden formControlName="service_form" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.service_form?.errors }" placeholder="service_form">
+                    <div *ngIf="submitted && f.service_form.errors" class="invalid-feedback">
+                        <div *ngIf="f.service_form.errors.required">Part Name is required</div>
+                    </div>
+                </div>
+
 
                 <button class="btn from__button--floating" type="submit">Submit</button>
             </form>

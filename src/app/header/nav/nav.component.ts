@@ -16,7 +16,14 @@ export class NavComponent implements OnInit {
   this.route.navigateByUrl('/login');
   }
   logout(){
-    
+    sessionStorage.clear();
+    this.route.navigateByUrl(''); 
+  }
+  isLoggedIn() {
+    if(sessionStorage.getItem("token")){
+      return true;
+    }
+    return false;
   }
 
 }
