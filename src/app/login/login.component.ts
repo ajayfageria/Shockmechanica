@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   });
   }
   get f() { return this.loginForm.controls; }
-  onSubmit(form: FormGroup) {
+  login(form: FormGroup) {
     if(form.invalid){
 
       this.alertService.error("LoggedIn -error");

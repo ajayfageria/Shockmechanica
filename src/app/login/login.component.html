@@ -7,10 +7,9 @@
             The Shock Mechanica - Shocker's solution
         </div>
         <div class="row-sm-9">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+            <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
                 <div class="form-group mt-4">
-                    <input id="email" formControlName="email" class="form-control" type="text" 
-                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" required placeholder="Email">
+                    <input id="email" formControlName="email" class="form-control" type="text" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" required placeholder="Email">
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                         <div *ngIf="f.email.errors.required">email is required</div>
                         <!-- <div error-for="email" id="error-for-email" role="alert" aria-live="assertive">Couldn’t find TSM account associated with this email. Please try again.</div> -->

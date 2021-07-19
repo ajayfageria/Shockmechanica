@@ -7,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
+  public isAdminLoggedIn: boolean = false;
   constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
   redirectToLogin(){
   this.route.navigateByUrl('/login');
+  }
+  logout(){
+    
   }
 
 }

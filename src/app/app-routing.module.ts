@@ -17,7 +17,7 @@ import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component
 import { ServiceComponent } from './serviceorder/service/service.component';
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
+  {path: '', component: MainComponent, pathMatch: 'full'},
   {path: 'product-list', component: ProductListComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'about-us', component: AboutUsComponent},
