@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
 import { ServiceComponent } from './serviceorder/service/service.component';
+import { AdminGuard } from './guards/admin.guard';
 
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
@@ -27,9 +28,8 @@ children: [
 {path: 'buy', component: PurchaseComponent},
 {path: 'others', component: OthersComponent},
 ]},
-  {path: 'admin-dashboard', component: AdminDashboardComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'admin-dashboard', component: AdminDashboardComponent,
+  {path: 'admin-dashboard', canActivate:[AdminGuard], component: AdminDashboardComponent,
    children: [
     {path: 'orders', component: OrdersListComponent},
     {path: 'create', component: NewadminComponent},
