@@ -15,7 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NewadminComponent } from './admin-dashboard/newadmin/newadmin.component';
 import { ServiceComponent } from './serviceorder/service/service.component';
-import { AdminGuard } from './guards/admin.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: MainComponent, pathMatch: 'full'},
@@ -29,7 +29,7 @@ children: [
 {path: 'others', component: OthersComponent},
 ]},
   {path: 'login', component: LoginComponent},
-  {path: 'admin-dashboard', canActivate:[AdminGuard], component: AdminDashboardComponent,
+  {path: 'admin-dashboard', canActivate:[AuthGuard], component: AdminDashboardComponent,
    children: [
     {path: 'orders', component: OrdersListComponent},
     {path: 'create', component: NewadminComponent},
