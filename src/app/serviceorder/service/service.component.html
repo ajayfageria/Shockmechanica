@@ -4,7 +4,7 @@
             <i class="fa fa-shopping-cart"></i> &nbsp;Place order
         </div>
         <div class="row-sm-1 login_sub_heading">
-            Grow TSM!
+            Grow with TSM!
         </div>
         <div class="row-sm-9">
             <form [formGroup]="serviceForm" (ngSubmit)="onSubmit(serviceForm)">
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="form-group mt-4">
-                    <input type="text" id="shocker_brand" formControlName="shocker_brand" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.shocker_brand?.errors }" required placeholder="Shocker Brand" />
+                    <input type="text" id="shocker_brand" formControlName="shocker_brand" class="form-control form-field" [ngClass]="{ 'is-invalid': submitted && f.shocker_brand?.errors }" required placeholder="Shocker Brand and Model" />
                     <div *ngIf="submitted && f.shocker_brand.errors" class="invalid-feedback">
                         <div *ngIf="f.shocker_brand.errors.required">Shcoker brand is required</div>
                     </div>
