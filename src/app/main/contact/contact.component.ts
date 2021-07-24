@@ -23,6 +23,7 @@ export class ContactComponent implements OnInit {
   get f() { return this.contactusForm.controls; }
 
   openContactForm(){
+    this.submitted = false;
  this.isContactFormLoaded = true;
   }
   onSubmit(form:FormGroup) {
@@ -36,6 +37,10 @@ export class ContactComponent implements OnInit {
     this.contactusForm.reset();
     this.submitted = true;
   }
+  }
+  onReset(){
+    this.isContactFormLoaded = false;
+    this.contactusForm.reset();
   }
 
 }
