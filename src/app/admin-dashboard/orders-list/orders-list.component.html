@@ -1,11 +1,12 @@
 <div class="col-sm" style="background-color: aliceblue">
+    <div class="row-sm-2 login_header">
+       Service requests
+     
+       <input class="form-control mr-sm-2" type="search" placeholder="Search here..." [(ngModel)]="searchText">
+    </div>
+  
 
-
-    <input class="form-control mr-sm-2" type="search" placeholder="Type something here..." [(ngModel)]="searchText">
-
-
-
-    <div class="table-responsive" style="zoom:73%">
+    <div class="table-responsive" style="zoom:79%">
         <table class="table table-striped table-bordered table-md table-light table-responsive">
             <thead>
                 <tr>
@@ -44,8 +45,10 @@
 
 <div class="col-sm" style="background-color: aliceblue">
 
-
-    <input class="form-control mr-sm-2" type="search" placeholder="Type something here..." [(ngModel)]="searchText">
+    <div class="row-sm-2 login_header">
+       Purchasing requests
+     </div>
+    <input class="form-control mr-sm-2" type="search" placeholder="Search here..." [(ngModel)]="searchBuy">
 
 
 
@@ -68,7 +71,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let customer of purchaseData | filter:searchText">
+                <tr *ngFor="let customer of purchaseData | filter:searchBuy">
 
                     <td>{{customer.name}}</td>
                     <td>{{customer.email}}</td>

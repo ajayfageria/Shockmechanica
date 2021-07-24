@@ -1,4 +1,4 @@
-.row{
+.contact_us{
     background: linear-gradient(to left, #c8dcee 0%, #ffffff 106%);
 }
 .contact-title{
@@ -41,7 +41,7 @@ p{
     position: relative;
     z-index: 1;
     height: 10px;
-    padding: 20px 12px;
+    padding: 17px 10px;
     border-radius: 4px !important;
 }
 

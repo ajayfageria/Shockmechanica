@@ -22,6 +22,7 @@ const routes: Routes = [
   {path: 'product-list', component: ProductListComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'myaccount', component: AdminDashboardComponent},
   {path: 'services', component: ServiceorderComponent,
 children: [
   {path: 'place', component: ServiceComponent},
@@ -29,7 +30,7 @@ children: [
 {path: 'others', component: OthersComponent},
 ]},
   {path: 'login', component: LoginComponent},
-  {path: 'admin-dashboard', canActivate:[AuthGuard], component: AdminDashboardComponent,
+  {path: 'admin-dashboard', component: AdminDashboardComponent,
    children: [
     {path: 'orders', component: OrdersListComponent},
     {path: 'create', component: NewadminComponent},

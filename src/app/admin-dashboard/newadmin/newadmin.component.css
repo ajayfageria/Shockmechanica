@@ -8,7 +8,7 @@
     padding: 24px 32px 32px;
     border-radius: 3px;
     margin-top: 3.5rem;
-    background: #fff;
+    background: rgba(95, 175, 250, 0.2);
 }
 
 .form-group .form-style {

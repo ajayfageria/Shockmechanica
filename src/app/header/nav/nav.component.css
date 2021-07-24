@@ -1,15 +1,12 @@
 .navbar-nav {
-    margin-right: 10rem;
+    margin-right: 5rem;
 }
-/* .navbar{
-    position: fixed;
-    z-index:1000;
-} */
+
 
 .nav-link {
     display: block;
     padding: 0.3rem 0.2rem;  
-    margin-left: 2rem;
+    margin-left: 2.5rem;
     text-align: center;
 }
 
@@ -53,7 +50,7 @@
     border-width: 2px;
     border-color: rgba(15, 129, 236, 0.2);
     padding: 0.3rem 0.2rem;  
-    margin-left: 2rem;
+    margin-left: 2.5rem;
     -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
     -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
     transition: all .3s cubic-bezier(.165, .84, .44, 1);
