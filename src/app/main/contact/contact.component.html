@@ -14,17 +14,33 @@
         <div class="form4 top" *ngIf = "isContactFormLoaded">
            <div class="row">
                     <div class="col-md-7">
-                        <div class="form-bg">
-                            <form class="form">
-                                <div class="form-group"> <label class="sr-only">Name</label> <input type="text" class="form-control" required="" id="nameNine" placeholder="Your Name"> </div>
-                                <div class="form-group"> <label class="sr-only">Email</label> <input type="email" class="form-control" required="" id="emailNine" placeholder="Email Address"> </div>
-                                <div class="form-group"> <label class="sr-only">Name</label> <textarea class="form-control" required="" rows="7" id="messageNine" placeholder="Write message"></textarea> </div> <button type="submit" class="btn text-center btn-blue">Send Message</button>
+                            <form [formGroup]="contactusForm" (ngSubmit)="onSubmit(contactusForm)">
+                                <div class="form-group mt-4">
+                                    <input id="name" formControlName="name" class="form-control form-field" type="text" [ngClass]="{ 'is-invalid': submitted && f.name?.errors }" required placeholder="Name">
+                                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                        <div *ngIf="f.name.errors.required">Name is required</div>
+                                    </div>
+                                  
+                
+                                </div>
+                                <div class="form-group mt-4">
+                                    <input id="email" formControlName="email" class="form-control form-field" type="email" [ngClass]="{ 'is-invalid': submitted && f.email?.errors }" required placeholder="Email">
+                                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                        <div *ngIf="f.email.errors.required">Email is required</div>
+                                    </div>
+                                </div>
+                                
+                <div class="form-group mt-4">
+                    <textarea type="textarea" id="queries" formControlName="queries" class="form-control form-field" placeholder="Any queries?"></textarea>
+                </div>
+                <button class="btn from__button--floating" style="margin-left: 6rem;" type="submit">Submit</button>
+                
+               
                             </form>
-                        </div>
+                        </div> 
                     </div>
                 </div>
-            
         </div>
     </div>
 </div>
-</div>
+

@@ -15,16 +15,9 @@ export class ServiceComponent implements OnInit {
   submitted:boolean = false;
   returnUrl: string |any;
   constructor(
-    private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
     private cusomerService: CustomerServiceService,
    private alertService: AlertService
 ) {
-    // redirect to home if already logged in
-    // if (this.authenticationService.currentUserValue) { 
-    //     this.router.navigate(['/']);
-    // }
 }
 
   ngOnInit(): void {
