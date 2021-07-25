@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
       this.adminService.adminLogin(form.value).subscribe(data=>{
         this.alertService.success("LoggedIn Successfully");
         this.router.navigateByUrl('admin-dashboard/orders')
-        sessionStorage.setItem("token",JSON.stringify(data.token));
-        localStorage.setItem("customer data", JSON.stringify(data));
+        sessionStorage.setItem("token",JSON.stringify(data.res.token));
+        localStorage.setItem("Admin", JSON.stringify(data.res.user));
     
         console.log(data);
       },err=>{

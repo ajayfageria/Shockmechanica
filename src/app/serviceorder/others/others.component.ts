@@ -28,6 +28,7 @@ export class OthersComponent implements OnInit {
         other_requirement: new FormControl(null, [Validators.required])
       });
   }
+
   get f() { return this.contactForm.controls; }
 
   openContactForm(){
