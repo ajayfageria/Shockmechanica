@@ -16,6 +16,7 @@ export class OrdersListComponent implements OnInit {
   data$ = new Subject<any>();
   serviceData: any;
   purchaseData: any;
+  otherData: any;
 
   constructor(private customerService:CustomerServiceService, private alertService: AlertService) { }
 
@@ -31,6 +32,8 @@ this.getCustomerData();
 
 
       this.purchaseData=customerdata.filter((value:any)=>value.purchase_form==true);
+
+      this.otherData=customerdata.filter((val:any)=>val.contact_form==true);
 
       this.customerList = customerdata;
       this.data$.next(customerdata);

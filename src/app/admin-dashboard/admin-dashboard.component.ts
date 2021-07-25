@@ -10,12 +10,15 @@ export class AdminDashboardComponent implements OnInit {
   // user: Object | undefined;
   userData: any;
   user: any;
+  adminData: any;
   constructor() { }
 
   ngOnInit(): void {
-  this.user=sessionStorage.getItem("user");
+    
+  this.user=sessionStorage.getItem("adminData");
+  console.log(this.user);
   
-  this.userData=JSON.parse(this.user);
+  this.adminData=JSON.parse(this.user);
 
 
   }
