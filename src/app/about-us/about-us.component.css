@@ -70,4 +70,19 @@ p{
 .card-title {
     color: #0D264C !important;
 }
+@media only screen and (max-width: 600px) {
+
+    .card-header{
+        margin-left: 5rem;
+        width: 210px;
+    }
+    .blog_header{
+        width: 200px;
+        margin-left: -1rem;
+    }
+    .alert-primary{
+        margin-left: 4rem;
+        width: 150px;
+    }
+}
 

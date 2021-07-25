@@ -8,12 +8,16 @@ th {
 td {
     text-align: center;
 }
+td,
+th {
+    min-width: 142px;
+}
 .login_header {
     font-size: 1.3rem;
     line-height: 1.25;
     font-weight: 600;
     color: #0D264C;
-    padding: 0 0 4px 0;
+   
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 
@@ -22,7 +26,7 @@ td {
 }
 
 .form-control {
-    width: 25%;
+    width: 75%;
     margin-bottom: 10px;
 }
 
@@ -45,5 +49,9 @@ td {
     }
     .form-inline .btn {
         margin-left: 8rem;
+    }
+    td,
+    th {
+        min-width: 10px;
     }
 }

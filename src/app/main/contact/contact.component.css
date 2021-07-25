@@ -57,7 +57,7 @@ button.from__button--floating,
     padding: .5rem 1.1rem .4rem;
     line-height: 1.6;
     font-size: 1.1rem;
-    font-weight: 500;
+   
     border-radius: 5px;
     border-width: 2px;
     margin-top: 3rem;
@@ -126,7 +126,7 @@ button.btn {
     font-weight: 500;
     border-radius: 5px;
     border-width: 2px;
-    margin-top: 1rem;
+    margin-top: 0.6rem;
     -webkit-transition: all .3s cubic-bezier(.165,.84,.44,1);
     -o-transition: all .3s cubic-bezier(.165,.84,.44,1);
     transition: all .3s cubic-bezier(.165,.84,.44,1);

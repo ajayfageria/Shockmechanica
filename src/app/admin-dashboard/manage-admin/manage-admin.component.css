@@ -35,3 +35,9 @@ th {
     text-align: center;
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
+@media only screen and (max-width: 600px) {
+    td,
+th {
+    min-width: 10px;
+}
+}

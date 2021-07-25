@@ -70,3 +70,9 @@ button.from__button--floating,
     color: #2d94f3!important;
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+        margin-left: 0rem;
+    }
+ }
