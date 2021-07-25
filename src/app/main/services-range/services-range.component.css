@@ -1,6 +1,7 @@
 .col-md {
-    background-color: rgba(15, 129, 236, 0.2);
+    background-color: rgba(217, 232, 247, 0.2);
     text-align: center;
+    border-radius: 10px;
 }
 
 .client-heading {

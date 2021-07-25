@@ -33,6 +33,7 @@ import { OthersComponent } from './serviceorder/others/others.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ManageAdminComponent } from './admin-dashboard/manage-admin/manage-admin.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { DeveloperTeamComponent } from './developer-team/developer-team.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     PurchaseComponent,
     OthersComponent,
     ManageAdminComponent,
+    DeveloperTeamComponent,
   
   ],
   imports: [

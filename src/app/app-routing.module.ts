@@ -1,3 +1,4 @@
+import { DeveloperTeamComponent } from './developer-team/developer-team.component';
 import { ManageAdminComponent } from './admin-dashboard/manage-admin/manage-admin.component';
 import { OthersComponent } from './serviceorder/others/others.component';
 import { PurchaseComponent } from './serviceorder/purchase/purchase.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'blog', component: BlogComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'myaccount', component: AdminDashboardComponent},
+  {path: 'developer', component: DeveloperTeamComponent},
   {path: 'services', component: ServiceorderComponent,
 children: [
   {path: 'place', component: ServiceComponent},
