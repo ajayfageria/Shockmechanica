@@ -40,10 +40,12 @@ export class LoginComponent implements OnInit {
       console.log(form.value);
       this.adminService.adminLogin(form.value).subscribe(data=>{
         this.alertService.success("LoggedIn Successfully");
-        this.router.navigateByUrl('admin-dashboard/orders')
         sessionStorage.setItem("token",JSON.stringify(data.res.token));
-        localStorage.setItem("Admin", JSON.stringify(data.res.user));
+        let admin=data.res.admin
+        sessionStorage.setItem("adminData", JSON.stringify(admin));
+      
     
+        this.router.navigateByUrl('admin-dashboard/orders')
         console.log(data);
       },err=>{
   
