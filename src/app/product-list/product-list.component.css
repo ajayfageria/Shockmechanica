@@ -22,3 +22,6 @@
     min-height: 90px;
     max-height: 90px;
 }
+.card-img-top{
+    max-height: 10rem !important;
+}

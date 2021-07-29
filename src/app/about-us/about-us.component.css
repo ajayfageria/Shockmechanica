@@ -42,6 +42,7 @@ p{
     font-weight: 600;
     color: rgba(0, 0, 0, 0.9);
     padding: 0 0 4px 0;
+    margin-left: 2.5rem;
     font-family: sb-sans, -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
 }
 .office_location_heading{
