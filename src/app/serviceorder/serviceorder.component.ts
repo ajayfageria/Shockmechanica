@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerServiceService } from '../services/customer/customer-service.service';
+import { AlertService } from '../services/alert/alert-service.service';
 
 @Component({
   selector: 'app-serviceorder',
@@ -18,7 +19,7 @@ export class ServiceorderComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private cusomerService: CustomerServiceService,
-    // private alertService: AlertService
+    private alertService: AlertService
 ) {
     // redirect to home if already logged in
     // if (this.authenticationService.currentUserValue) { 
@@ -51,7 +52,7 @@ export class ServiceorderComponent implements OnInit {
           this.orderForm.reset();
           this.submitted=false;
         },(err)=>{
-
+          this.alertService.error("Error! please try again")
         })
       }
 

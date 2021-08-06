@@ -63,7 +63,7 @@ export class NewadminComponent implements OnInit {
         this.createadminForm.reset();
         this.submitted=false;
       },(err)=>{
-        this.alertService.success("Error! Record is not updated");
+        this.alertService.error("Error! Record is not updated");
       })
     }
 
@@ -75,7 +75,6 @@ export class NewadminComponent implements OnInit {
     }else{
 
     this.adminService.createAdmin(form.value).subscribe(data=>{
-      console.log(data);
       this.createadminForm.reset();
       this.submitted=false;
 

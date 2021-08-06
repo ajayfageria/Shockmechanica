@@ -16,8 +16,7 @@ export class AdminDashboardComponent implements OnInit {
   ngOnInit(): void {
     
   this.user=sessionStorage.getItem("adminData");
-  console.log(this.user);
-  
+    
   this.adminData=JSON.parse(this.user);
 
 

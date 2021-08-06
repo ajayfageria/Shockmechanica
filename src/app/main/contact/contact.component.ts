@@ -50,7 +50,6 @@ export class ContactComponent implements OnInit {
       this.alertService.error("Error! please try again")
     })
     }
-    console.log(form.value);
       this.loading = true;
       
   }

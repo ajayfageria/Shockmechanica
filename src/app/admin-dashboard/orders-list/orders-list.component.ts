@@ -39,14 +39,14 @@ this.getCustomerData();
       this.data$.next(customerdata);
     },
     (err)=>{
-
+      this.alertService.error("Error! please try after some time")
     })
   }
 
 
   filter(search: any) {
     this.data$.next(this.customerList?.filter(d=>d.includes(search)));
-    console.log(this.data$);
+   
   }
 
 

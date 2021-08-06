@@ -53,7 +53,6 @@ onSubmit(form: FormGroup) {
     this.alertService.error("Error! please try again")
   })
   }
-  console.log(form.value);
     this.loading = true;
     
 }

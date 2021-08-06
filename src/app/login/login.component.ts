@@ -36,8 +36,6 @@ export class LoginComponent implements OnInit {
       this.alertService.error("LoggedIn -error");
       return
     }else{
-
-      console.log(form.value);
       this.adminService.adminLogin(form.value).subscribe(data=>{
         this.alertService.success("LoggedIn Successfully");
         sessionStorage.setItem("token",JSON.stringify(data.res.token));
@@ -46,9 +44,9 @@ export class LoginComponent implements OnInit {
       
     
         this.router.navigateByUrl('admin-dashboard/orders')
-        console.log(data);
+   
       },err=>{
-  
+       this.alertService.error("Something is wrong with the credentials,please try again!")
       })
    
      

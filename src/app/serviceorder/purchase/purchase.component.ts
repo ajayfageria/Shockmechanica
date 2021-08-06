@@ -45,12 +45,14 @@ onSubmit(form: FormGroup) {
   this.customerService.postCustomerData(form.value).subscribe(data=>{
     this.alertService.success("Order has been placed successfully!")
     this.purchaseForm.reset();
+    this.purchaseForm.patchValue({
+      "purchase_form": true
+        });
     this.submitted=false;
   },err=>{
     this.alertService.error("Error! please try again")
   })
   }
-  console.log(form.value);
     this.loading = true;
     
 }
