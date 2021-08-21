@@ -17,7 +17,7 @@ export class OrdersListComponent implements OnInit {
   serviceData: any;
   purchaseData: any;
   otherData: any;
-
+  searchOthers:any;
   constructor(private customerService:CustomerServiceService, private alertService: AlertService) { }
 
   ngOnInit(): void {
